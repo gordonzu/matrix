@@ -9,6 +9,7 @@ set(sources
     object.cpp
     agent.cpp
     xy_location.cpp
+    matrix.cpp
     main.cpp
     )
 
