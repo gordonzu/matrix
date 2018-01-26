@@ -1,3 +1,0 @@
-/home/gordonzu/src/cpp/matrix/build/CMakeFiles/edit_cache.dir
-/home/gordonzu/src/cpp/matrix/build/CMakeFiles/rebuild_cache.dir
-/home/gordonzu/src/cpp/matrix/build/CMakeFiles/matrix.dir

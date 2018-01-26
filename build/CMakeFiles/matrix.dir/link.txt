@@ -1,1 +1,0 @@
-/usr/bin/c++    -std=c++14 -g -Wall -O0 -fmax-errors=1   CMakeFiles/matrix.dir/object.cpp.o CMakeFiles/matrix.dir/agent.cpp.o CMakeFiles/matrix.dir/xy_location.cpp.o CMakeFiles/matrix.dir/main.cpp.o  -o matrix -rdynamic 
