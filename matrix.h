@@ -22,7 +22,7 @@ namespace xy {
     public:
         Matrix(unsigned w, unsigned h);
         virtual ~Matrix(); 
-        //std::set<Object*>& get_set(XYLocation& loc);
+        std::set<Object*>* get_set(XYLocation& loc);
         static Vector& get_vector();
         Vector::iterator has_xy(XYLocation& loc);
     };

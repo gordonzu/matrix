@@ -21,7 +21,7 @@ namespace xy {
     }
 
     Vector::iterator Matrix::has_xy(XYLocation& loc) {
-        auto it = std::find_if(
+        it = std::find_if(
             Matrix::get_vector().begin(), 
             Matrix::get_vector().end(), 
             [loc](std::pair<XYLocation, std::set<Object*>>& mypair) {
@@ -30,10 +30,15 @@ namespace xy {
         return it;
     }
 
-    /*std::set<Object*>& Matrix::get_set(XYLocation& xy) {
-        ;;
+    std::set<Object*>* Matrix::get_set(XYLocation& xy) {
+        if (has_xy(xy) != get_vector().end()) {
+            return &(*it).second;
+        }
+        else {
+            return nullptr;
+        }
     }
-    */
+
 
     //bool has_object(Object* obj) {
 /*        auto it = Matrix::get_set().find(obj);
