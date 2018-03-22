@@ -18,21 +18,18 @@ namespace xy {
     private:
         static Vector                       vec;
         Vector::iterator                    it;
-        std::unique_ptr<XYLocation>         xy;
-        std::unique_ptr<std::set<Object*>>  setobj;
 
     public:
         Matrix(unsigned w, unsigned h);
         virtual ~Matrix(); 
-        std::set<Object*>& get_set(XYLocation& loc);
-        static Vector& get_vector(); 
+        //std::set<Object*>& get_set(XYLocation& loc);
+        static Vector& get_vector();
+        Vector::iterator has_xy(XYLocation& loc);
     };
 
-unsigned vector_size();
-
-bool has_xy(XYLocation& loc);
-
-bool has_object(std::set<Object*>& theset);
+/////////// namespace functions /////////////////
+    unsigned vector_size();
+    //bool has_object(std::set<Object*>& theset);
 
 }
 
