@@ -53,20 +53,19 @@ namespace xy {
         else
             return false;
     }
-    /***************************************************************/
 
-    size_t vector_size() {
-        return Matrix::get_vector().size();
-    }
-
-   /* size_t set_size(XYLocation& xy) {
-        if (Matrix::get_set(xy)) {
-            return Matrix::get_set(xy)->size();
+    size_t Matrix::set_size(XYLocation& xy) {
+        if (get_set(xy)) {
+            return get_set(xy)->size();
         }
         else
             return 0;
     }
-    */
+
+    size_t Matrix::vector_size() {
+        return Matrix::get_vector().size();
+    }
+
 }
 
 

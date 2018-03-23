@@ -26,12 +26,9 @@ namespace xy {
         static Vector& get_vector();
         Vector::iterator has_xy(XYLocation& loc);
         bool add_object(Object* obj, XYLocation& xy);
+        size_t set_size(XYLocation& xy);
+        size_t vector_size();
     };
-
-/////////// namespace functions /////////////////
-    size_t vector_size();
-    //size_t set_size(XYLocation& xy);
 }
-
 #endif
 

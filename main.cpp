@@ -5,11 +5,12 @@
 
 int main(int argc, char** argv) {   
     xy::Matrix m(10, 12);
-    std::cout << xy::vector_size() << std::endl;
+    std::cout << m.vector_size() << std::endl;
 
     XYLocation xy = XYLocation(9, 9);
     XYLocation loc = XYLocation(15, 10);
     std::unique_ptr<Object> agent = std::make_unique<Agent>();
+    std::unique_ptr<Object> agnt2 = std::make_unique<Agent>();
 
     // test has_xy
     if (m.has_xy(xy) != m.get_vector().end())
@@ -26,7 +27,12 @@ int main(int argc, char** argv) {
     // test add_object
     if(m.add_object(agent.get(), xy)) {
         std::cout << "Object added!" << std::endl;
-        //std::cout << "Set Size: " << xy::set_size(xy) << std::endl;
+        std::cout << "Set Size: " << m.set_size(xy) << std::endl;
+    }
+
+    if(m.add_object(agnt2.get(), xy)) {
+        std::cout << "Object added!" << std::endl;
+        std::cout << "Set Size: " << m.set_size(xy) << std::endl;
     }
 }
 
