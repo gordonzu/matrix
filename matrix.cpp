@@ -39,19 +39,34 @@ namespace xy {
         }
     }
 
+    bool Matrix::add_object(Object* obj, XYLocation& xy) {
+        std::set<Object*>::iterator myit;
+        std::set<Object*>* theset = get_set(xy);
 
-    //bool has_object(Object* obj) {
-/*        auto it = Matrix::get_set().find(obj);
-        if (it != Matrix::get_set().end())
+        if (theset) {
+            if ((myit = theset->find(obj)) != theset->end()) {
+                theset->erase(myit);
+            }
+            theset->insert(obj);
             return true;
-*/
-      //  return false;
-    //}
+        }
+        else
+            return false;
+    }
+    /***************************************************************/
 
-    unsigned vector_size() {
+    size_t vector_size() {
         return Matrix::get_vector().size();
     }
 
+   /* size_t set_size(XYLocation& xy) {
+        if (Matrix::get_set(xy)) {
+            return Matrix::get_set(xy)->size();
+        }
+        else
+            return 0;
+    }
+    */
 }
 
 

@@ -16,8 +16,8 @@ namespace xy {
 
     class Matrix {
     private:
-        static Vector                       vec;
-        Vector::iterator                    it;
+        static Vector       vec;
+        Vector::iterator    it;
 
     public:
         Matrix(unsigned w, unsigned h);
@@ -25,12 +25,12 @@ namespace xy {
         std::set<Object*>* get_set(XYLocation& loc);
         static Vector& get_vector();
         Vector::iterator has_xy(XYLocation& loc);
+        bool add_object(Object* obj, XYLocation& xy);
     };
 
 /////////// namespace functions /////////////////
-    unsigned vector_size();
-    //bool has_object(std::set<Object*>& theset);
-
+    size_t vector_size();
+    //size_t set_size(XYLocation& xy);
 }
 
 #endif

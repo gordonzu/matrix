@@ -9,7 +9,7 @@ int main(int argc, char** argv) {
 
     XYLocation xy = XYLocation(9, 9);
     XYLocation loc = XYLocation(15, 10);
-
+    std::unique_ptr<Object> agent = std::make_unique<Agent>();
 
     // test has_xy
     if (m.has_xy(xy) != m.get_vector().end())
@@ -22,6 +22,12 @@ int main(int argc, char** argv) {
         std::cout << "Set Found!" << std::endl;
     if (!m.get_set(loc))
         std::cout << "Set Not Found!" << std::endl;
+
+    // test add_object
+    if(m.add_object(agent.get(), xy)) {
+        std::cout << "Object added!" << std::endl;
+        //std::cout << "Set Size: " << xy::set_size(xy) << std::endl;
+    }
 }
 
 

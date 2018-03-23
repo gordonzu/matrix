@@ -1,4 +1,4 @@
-// EnvironmentObject .cpp
+// Object .cpp
 //
 
 #include "object.h"
@@ -6,4 +6,5 @@
 Object::~Object()
 {
 }
+
 
